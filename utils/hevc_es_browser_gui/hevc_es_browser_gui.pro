@@ -14,7 +14,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 INCLUDEPATH += . ../../hevcparser/include/ ../common/ ../../external/QHexView/include/
 
-gitinfo.commands = verinfo/verinfo.sh version version_info.h
+gitinfo.commands = verinfo/verinfo.sh .version version_info.h
 
 gitinfo.target = gitinfo
 

@@ -29,9 +29,7 @@ Building requirements:
 
 * boost (for testing only)
 
-* qt5
-  - brew: `brew install qt5`
-
+* qt6
 
 Building:
 -----
@@ -50,7 +48,7 @@ make
 
 cd ../utils/hevc_es_browser_gui/
 
-qmake hevc_es_browser_gui.pro
+qmake6 hevc_es_browser_gui.pro
 
 make gitinfo
 
