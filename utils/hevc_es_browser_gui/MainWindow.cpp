@@ -35,6 +35,8 @@ MainWindow::MainWindow(QWidget *parent, Qt::WindowFlags flags):
   ,m_pinfoViewer(new StreamInfoViewer)
   ,m_phdrInfoViewer(new HDRInfoViewer)
 {
+  setWindowTitle("HEVCESBrowser");
+
   QToolBar *ptb = addToolBar("Menu");
 
   QAction *pactOpen = ptb -> addAction("Open...");
@@ -239,10 +241,11 @@ void MainWindow::readCustomData()
 void MainWindow::slotAbout()
 {
   QString message;
-  message = "<center><b>HEVCESBrowser</b></center>";
-  message += "<center>virinext@gmail.com</center>";
-  message += QString("<center>Version: ") + VERSION_STR + "</center>";
-  message += "<center>GUI Based on Qt</center>";
+  message = "<p><center><b>HEVCESBrowser</b></center></p>";
+  message += "<p>Original author: virinext@gmail.com</p>";
+  message += "<p>Modified by: <a href=\"https://github.com/xieyubo/hevcesbrowser\">https://github.com/xieyubo/hevcesbrowser</a></p>";
+  message += QString("<p>Version: ") + VERSION_STR + "</p>";
+  message += "<p>GUI Based on Qt6</p>";
   QMessageBox::about(this, "About", message);
 }
 
